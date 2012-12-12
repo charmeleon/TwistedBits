@@ -119,9 +119,7 @@ class HTTPTracker(object):
             'left': torrent.left,
             'event': etype }
 
-        url = torrent.tracker_url + '?' + urllib.urlencode(announce_query)
-
-        return url
+        return torrent.tracker_url + '?' + urllib.urlencode(announce_query)
 
 class TrackerClient(object):
     """Presents a uniform API across the different kinds of trackers."""
